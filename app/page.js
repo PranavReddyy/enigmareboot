@@ -86,7 +86,7 @@ export default function Home() {
               />
               <h1 className="text-2xl font-bold font-mono">REBOOT</h1>
             </div>
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <button
                 onClick={() => setCurrentView("game")}
                 className={`px-4 py-2 border border-black ${
@@ -107,7 +107,7 @@ export default function Home() {
               >
                 LEADERBOARD
               </button>
-            </div>
+            </div> */}
             <div className="text-right">
               <div className="font-mono font-bold">{team.teamName}</div>
               {team.isMatchmade && (
