@@ -247,6 +247,7 @@ export default function AdminPage() {
       }
 
       // Calculate position and points
+      // Calculate position and points
       const allCompletions = await getDocs(
         query(
           collection(db, "completions"),
@@ -255,8 +256,39 @@ export default function AdminPage() {
       );
       const position = allCompletions.size + 1;
 
-      let points = Math.max(0, 11 - position);
-      if (position > 10) points = 0;
+      // Correct point system matching your table
+      let points;
+      switch (position) {
+        case 1:
+          points = 10;
+          break;
+        case 2:
+          points = 8;
+          break;
+        case 3:
+          points = 6;
+          break;
+        case 4:
+          points = 5;
+          break;
+        case 5:
+          points = 4;
+          break;
+        case 6:
+          points = 3;
+          break;
+        case 7:
+          points = 2;
+          break;
+        case 8:
+        case 9:
+        case 10:
+          points = 1;
+          break;
+        default:
+          points = 0;
+          break;
+      }
 
       const team = teams.find((t) => t.id === teamId);
       if (team?.assignedCommittee === committeeId) {

@@ -115,7 +115,7 @@ export default function GameDashboard() {
             Congratulations! You have qualified for the final challenge.
           </p>
           <a
-            href="https://meet.google.com/your-finale-link"
+            href="https://meet.google.com/yjw-kuyb-axx?pli=1"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-yellow-900 text-yellow-100 px-8 py-3 font-bold border-2 border-yellow-900 hover:bg-yellow-800 transition-colors shadow-md"
