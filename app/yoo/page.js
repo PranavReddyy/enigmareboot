@@ -17,7 +17,7 @@ import {
 } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 
-const ADMIN_PASSWORD = "reboot2025";
+const ADMIN_PASSWORD = "ankitsreboot";
 
 export default function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
